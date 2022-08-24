@@ -1,0 +1,44 @@
+{
+  "tasks": [
+    {
+      "completed": false,
+      "task": "Eat Pizza",
+      "category": "Food",
+      "id": 2
+    },
+    {
+      "completed": false,
+      "task": "Eat Pizza",
+      "category": "Food",
+      "id": 3
+    },
+    {
+      "completed": false,
+      "task": "Eat Pizza",
+      "category": "Food",
+      "id": 4
+    },
+    {
+      "completed": false,
+      "task": "Buy Pineapple",
+      "category": "Food",
+      "id": 5
+    },
+    {
+      "completed": false,
+      "task": "Water Gold Fish",
+      "category": "Pets",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
