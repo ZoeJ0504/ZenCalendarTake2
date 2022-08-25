@@ -4,7 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import Todolist from "../components/Todolist"
 import styled from 'styled-components'
 import Quotes from "../components/Quotes"
-import Image from "../images/calendarbackground.jpg"
+import Image from "../images/rocks3.jpeg"
 
 function Home() {
 
@@ -18,7 +18,7 @@ function Home() {
                     initialView="dayGridMonth"
                 />
             </BigCalendarDiv>
-
+            {/* <Todolist /> */}
         </HomeDiv>
 
     )

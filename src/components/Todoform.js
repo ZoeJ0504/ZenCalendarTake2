@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styled from 'styled-components'
 
+
 function Todoform({ handleSubmit }) {
     const [newTask, setNewTask] = useState({
         completed: false,
@@ -27,14 +28,31 @@ function Todoform({ handleSubmit }) {
     }
 
     return (
-        <div>
+        <FormDiv>
+            <TitleP>Got Something More To-do?</TitleP>
             <form onSubmit={handleHandlerSubmit}>
-                <input onChange={handleChange} type="text" name="task" placeholder="Task"></input>
-                <input onChange={handleChange} type="text" name="category" placeholder="Category"></input>
+                <p><TaskInput onChange={handleChange} type="text" name="task" placeholder="Task"></TaskInput></p>
+                <p><TaskInput onChange={handleChange} type="text" name="category" placeholder="Category"></TaskInput></p>
                 <button type="submit">Submit</button>
             </form>
-        </div>
+        </FormDiv>
     )
 }
 
+const FormDiv = styled.div`
+background-color: #BDC2BF;
+padding: 20px;
+background-size: 100%
+
+`
+
+const TaskInput = styled.input`
+width: 70%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+`
+const TitleP = styled.p`
+font-size: 30px;
+`
 export default Todoform
