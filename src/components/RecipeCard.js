@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function RecipeCard() {
+function RecipeCard({recipe}) {
+
+    const [commentsVisible, setCommentsVisible] = useState(false);
+
+    function handleClick(){
+        setCommentsVisible(commentsVisible => !commentsVisible);
+        
+    }
+
+    const ingredientText = commentsVisible ? `Ingredients: ${recipe.ingredients}` : 'Click Image for additional cooking instructions';
+    const instructionText = commentsVisible ? `Instructions: ${recipe.instructions}` : '';
+    
+    const preparationTime = recipe.time.prepration_time;
+    const cookTime = recipe.time.cooking_time;
+
+    
+
     return (
-        <div>check this div</div>
+        <div>
+            <h1>{recipe.name}</h1>
+            <p>Preparation Time: {preparationTime === '' ? 'NA' : preparationTime} Cooking Time: {cookTime === '' ? 'NA' : cookTime}</p>
+            <img onClick={handleClick} src={recipe.image} alt='food' width='250px' height='250px'/>
+            <p>{ingredientText}</p>
+            <p>{instructionText}</p>
+
+        </div>
     )
 
 }

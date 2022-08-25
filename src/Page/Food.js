@@ -4,6 +4,8 @@ import RecipeCard from '../components/RecipeCard'
 function Food() {
     const [recipes, setRecipes] = useState({})
     const [foodGroup, setFoodGroup] = useState('')
+    const [input, setInput] = useState('');
+
     useEffect(() => {
         fetch(`https://recipesapi2.p.rapidapi.com/recipes/${foodGroup}`, {
             method: "GET",
@@ -15,15 +17,33 @@ function Food() {
         })
             .then(res => res.json())
             .then(data => setRecipes(data))
-    }, [])
-    console.log(recipes)
+    }, [input])
+
+
+    const recipeArr = recipes.data;
+
     function handleOnChange(event) {
-        setFoodGroup(event.target.value)
+        setFoodGroup(event.target.value);
+
     }
+
+    function handleSubmit(event){
+        event.preventDefault();
+        setInput(foodGroup);
+        
+    }
+
     return (
         <div>
-            <input onChange={handleOnChange} type="text" value={foodGroup} placeholder="FoodGroup"></input>
-            < RecipeCard />
+            <p>Look up Recipes for your Favorite Meals</p>
+
+            <form onSubmit={handleSubmit}> 
+                <input onChange={handleOnChange} type="text" value={foodGroup} placeholder="FoodGroup"></input>
+                <button type='Submit'>Search</button>
+            </form>
+
+
+            {recipeArr === undefined ? <p>Loading...</p> : recipeArr.map((recipe) => <RecipeCard key={recipeArr.indexOf(recipe)} recipe={recipe} />)}
         </div>
     )
 }
