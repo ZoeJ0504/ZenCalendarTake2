@@ -9,6 +9,7 @@ function Food() {
     const [foodGroup, setFoodGroup] = useState('')
     const [input, setInput] = useState('');
     const [groceryList, setGroceryList] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         fetch(`https://recipesapi2.p.rapidapi.com/recipes/pancake`, {
@@ -34,6 +35,7 @@ function Food() {
     function handleSubmit(event){
         event.preventDefault();
         setInput(foodGroup);
+        setLoading(!loading);
         
     }
 
@@ -56,6 +58,8 @@ function Food() {
     }
 
 
+    const loadingText = loading ? 'loading...' : '';
+
     return (
         <FoodPageDiv>
             <FoodCardDiv>
@@ -67,7 +71,7 @@ function Food() {
                 </form>
 
 
-                {recipeArr === undefined ? <p>Loading...</p> : recipeArr.map((recipe) => <RecipeCard key={recipeArr.indexOf(recipe)} recipe={recipe} addIngredients={addIngredients}/>)}
+                {recipeArr === undefined ? <p>{loadingText}</p> : recipeArr.map((recipe) => <RecipeCard key={recipeArr.indexOf(recipe)} recipe={recipe} addIngredients={addIngredients}/>)}
             </FoodCardDiv>
 
             <GroceryListDiv>
@@ -81,7 +85,11 @@ function Food() {
 const FoodPageDiv = styled.div`
 display: flex;
 justify-content: space-between;
-padding: 100px`
+padding: 100px;
+background-color: #BBCDE5;
+padding-top: 100px;
+padding-bottom: 500px;
+`
 
 
 const FoodCardDiv = styled.div`
