@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled from 'styled-components'
 
 
-function Todoform({ handleSubmit }) {
+function Todoform({ handleSubmit, HandleClickFive }) {
     const [newTask, setNewTask] = useState({
         completed: false,
         task: "",
@@ -30,12 +30,13 @@ function Todoform({ handleSubmit }) {
 
     return (
         <FormDiv>
-            <TitleP>Got Something More To-do?</TitleP>
+            <TitleP onClick={HandleClickFive}>Got Something More To-do?</TitleP>
             <form onSubmit={handleHandlerSubmit}>
                 <p><TaskInput onChange={handleChange} type="text" name="task" placeholder="Task"></TaskInput></p>
                 <p><TaskInput onChange={handleChange} type="text" name="category" placeholder="Category"></TaskInput></p>
-                <button type="submit">Submit</button>
+                <SubmitButton type="submit">Don't Push This</SubmitButton>
             </form>
+            <p>As long as it's not on the list it can be forgotten</p>
         </FormDiv>
     )
 }
@@ -54,5 +55,13 @@ box-sizing: border-box;
 `
 const TitleP = styled.p`
 font-size: 30px;
+`
+
+const SubmitButton = styled.button`
+border-radius: 12px;
+background-color: black;
+color: white;
+width: 150px;
+height: 50px;
 `
 export default Todoform

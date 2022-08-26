@@ -3,7 +3,7 @@ import RecipeCard from '../components/RecipeCard'
 import styled from 'styled-components';
 import GroceryList from '../components/GroceryList';
 
-function Food() {
+function Food({ HandleClickThree }) {
 
     const [recipes, setRecipes] = useState({})
     const [foodGroup, setFoodGroup] = useState('')
@@ -64,6 +64,7 @@ function Food() {
 
     const loadingText = loading ? 'loading...' : '';
 
+
     return (
         <FoodPageDiv>
             <FoodCardDiv>
@@ -81,7 +82,7 @@ function Food() {
             </FoodCardDiv >
 
             <GroceryListDiv>
-                <h1>Grocery List</h1>
+                <h1 onClick={HandleClickThree}>Grocery List</h1>
                 <GroceryList groceryList={groceryList} groceryItems={groceryItems} />
             </GroceryListDiv >
         </FoodPageDiv >
@@ -105,7 +106,7 @@ width: 500px;
 `
 
 const GroceryListDiv = styled.div`
-background - color: #639FAB;
+background-color: #639FAB;
 padding: 50px;
 width: 250px;
 margin: 50px;

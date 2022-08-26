@@ -3,13 +3,13 @@ import Todolist from "../components/Todolist"
 import Todoform from "../components/Todoform"
 import styled from '@emotion/styled'
 
-function ToDoPage({ taskList, handleSubmit }) {
+function ToDoPage({ taskList, handleSubmit, HandleClickFive }) {
 
 
     return (
         <ToDoDiv>
             <Todolist taskList={taskList} />
-            <Todoform handleSubmit={handleSubmit} />
+            <Todoform handleSubmit={handleSubmit} HandleClickFive={HandleClickFive} />
         </ToDoDiv >
     )
 }

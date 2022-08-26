@@ -31,13 +31,7 @@
       "id": 6
     },
     {
-      "completed": false,
-      "task": "Feed Cow",
-      "category": "Food",
-      "id": 7
-    },
-    {
-      "completed": false,
+      "completed": true,
       "task": "Feed Cow",
       "category": "Pets",
       "id": 8

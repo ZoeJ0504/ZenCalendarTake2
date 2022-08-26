@@ -6,12 +6,14 @@ import styled from 'styled-components'
 import Quotes from "../components/Quotes"
 import Image from "../images/rocks3.jpeg"
 
-function Home({ taskList }) {
+function Home({ taskList, HandleClicFour }) {
 
     return (
         <HomeDiv>
+            <div onClick={HandleClicFour}>
+                <Quotes />
+            </div>
 
-            <Quotes />
             <BiggerDiv>
                 <BigCalendarDiv>
                     <FullCalendar
