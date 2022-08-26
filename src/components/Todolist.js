@@ -1,21 +1,20 @@
 import React from "react"
 import styled from 'styled-components'
-import DeleteIcon from '@mui/icons-material/Delete';
+import Rocks from '../images/rocks4.jpeg'
 
 function Todolist({ taskList }) {
     console.log(taskList)
     return (
-        <div>
+        <TableDiv>
             <table>
-                <thead>
+                <TableHeader>
                     <tr>
                         <th>Completed?</th>
                         <th>Task</th>
                         <th>Category</th>
-                        <th>Remove?</th>
                     </tr>
-                </thead>
-                <tbody>
+                </TableHeader>
+                <TableBody>
                     {taskList.map(task => {
                         return <tr>
                             <td>
@@ -23,15 +22,24 @@ function Todolist({ taskList }) {
                             </td>
                             <td>{task.task}</td>
                             <td>{task.category}</td>
-                            <td>
-                                <button>X</button>
-                            </td>
                         </tr>
                     })}
-                </tbody>
+                </TableBody>
             </table>
-        </div>
+        </TableDiv>
     )
 }
 
+const TableDiv = styled.div`
+padding: 30px;
+background-image: url(${Rocks});
+background-size: 100%;
+`
+const TableHeader = styled.thead`
+font-size: 30px;
+`
+
+const TableBody = styled.tbody`
+font-size: 20px;
+`
 export default Todolist

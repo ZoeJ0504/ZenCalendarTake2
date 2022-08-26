@@ -25,5 +25,8 @@ function ToDoPage() {
 
 const ToDoDiv = styled.div`
 background-color: #6E6A6F;
+display: flex;
+justify-content: space-evenly;
+padding: 20px;
 `
 export default ToDoPage

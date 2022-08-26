@@ -11,7 +11,7 @@ function Food() {
     const [groceryList, setGroceryList] = useState([]);
 
     useEffect(() => {
-        fetch(`https://recipesapi2.p.rapidapi.com/recipes/pancakes`, {
+        fetch(`https://recipesapi2.p.rapidapi.com/recipes/pancake`, {
             method: "GET",
             params: { "maxRecipes": '10' },
             headers: {
@@ -21,7 +21,7 @@ function Food() {
         })
             .then(res => res.json())
             .then(data => setRecipes(data))
-    }, [input])
+    }, [input]);
 
 
     const recipeArr = recipes.data;
@@ -85,10 +85,15 @@ padding: 100px`
 
 
 const FoodCardDiv = styled.div`
+background-color: #639FAB;
+padding: 50px;
 
 `
 
 const GroceryListDiv = styled.div`
+background-color: #639FAB;
+padding: 50px;
+width: 250px
 `
 
 export default Food;
