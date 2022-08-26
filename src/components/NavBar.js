@@ -1,16 +1,14 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import Home from "../Page/Home"
-import ToDoList from "../Page/ToDoPage"
-import CalendarPage from "../Page/CalendarPage"
-import Food from "../Page/Food"
 import styled from '@emotion/styled'
 import images from "../images/lotus.png"
-function NavBar() {
+function NavBar({ handleClick, handleClickTwo }) {
+
+
     return (
         <NavBarDiv>
 
-            <TitleDiv> <LotusImg src={images} alt="Lotus" /> ZenCalendar</TitleDiv>
+            <TitleDiv > <LotusImg src={images} alt="Lotus" onClick={handleClick} /> <span onClick={handleClickTwo}>ZenCalendar</span></TitleDiv>
             <Link to="/" >Home</Link>
             <Link to="/todoList" > ToDoList</Link>
             <Link to="/calendar" > Calendar</Link>

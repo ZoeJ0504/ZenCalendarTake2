@@ -3,17 +3,8 @@ import Todolist from "../components/Todolist"
 import Todoform from "../components/Todoform"
 import styled from '@emotion/styled'
 
-function ToDoPage() {
-    const [taskList, setTaskList] = useState([])
-    useEffect(() => {
-        fetch("http://localhost:4000/tasks")
-            .then(res => res.json())
-            .then(data => setTaskList(data))
-    }, [])
+function ToDoPage({ taskList, handleSubmit }) {
 
-    function handleSubmit(newTask) {
-        setTaskList([...taskList, newTask])
-    }
 
     return (
         <ToDoDiv>
@@ -27,6 +18,7 @@ const ToDoDiv = styled.div`
 background-color: #6E6A6F;
 display: flex;
 justify-content: space-evenly;
-padding: 20px;
+padding-bottom: 500px;
+padding-top: 100px;
 `
 export default ToDoPage

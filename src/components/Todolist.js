@@ -33,7 +33,8 @@ function Todolist({ taskList }) {
 const TableDiv = styled.div`
 padding: 30px;
 background-image: url(${Rocks});
-background-size: 100%;
+background-size: cover;
+color: white;
 `
 const TableHeader = styled.thead`
 font-size: 30px;

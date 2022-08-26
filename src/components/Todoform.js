@@ -25,6 +25,7 @@ function Todoform({ handleSubmit }) {
             .then(res => res.json())
             .then(data => console.log(data))
         handleSubmit(newTask)
+        event.target.reset()
     }
 
     return (
@@ -40,10 +41,9 @@ function Todoform({ handleSubmit }) {
 }
 
 const FormDiv = styled.div`
-background-color: #BDC2BF;
+background-color: darkgray;
 padding: 20px;
 background-size: 100%
-
 `
 
 const TaskInput = styled.input`

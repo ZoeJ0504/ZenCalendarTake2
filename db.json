@@ -29,6 +29,72 @@
       "task": "Water Gold Fish",
       "category": "Pets",
       "id": 6
+    },
+    {
+      "completed": false,
+      "task": "Feed Cow",
+      "category": "Food",
+      "id": 7
+    },
+    {
+      "completed": false,
+      "task": "Feed Cow",
+      "category": "Pets",
+      "id": 8
+    },
+    {
+      "completed": false,
+      "task": "Hide Pictures of Dogs",
+      "category": "Pets",
+      "id": 9
+    },
+    {
+      "completed": false,
+      "task": "Hide Pictures of Dogs",
+      "category": "Pets",
+      "id": 10
+    },
+    {
+      "completed": false,
+      "task": "Search for Hidden Easter Eggs",
+      "category": "Random",
+      "id": 11
+    },
+    {
+      "completed": false,
+      "task": "Patch Broken API",
+      "category": "Work",
+      "id": 12
+    },
+    {
+      "completed": false,
+      "task": "Contemplate Meaning of Life",
+      "category": "Work",
+      "id": 13
+    },
+    {
+      "completed": false,
+      "task": "Drink Away Sorrows ",
+      "category": "Random",
+      "id": 14
+    },
+    {
+      "completed": false,
+      "task": "Live Another Day",
+      "category": "Random",
+      "id": 15
+    },
+    {
+      "completed": false,
+      "task": "Live Love Laugh",
+      "category": "Random",
+      "id": 16
+    },
+    {
+      "completed": false,
+      "task": "Convert People to Cult",
+      "category": "Random",
+      "id": 17
     }
   ],
   "events": [
