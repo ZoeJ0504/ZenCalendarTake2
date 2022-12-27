@@ -4,9 +4,11 @@
   <img src="src/images/ZenCalendar.png">  
 </p>
 
+Muti purpose platform that allows users to make new events on a calendar, create a to-do-list, as well as build a grocery list.
 
 ## Features
 
+The App uses BigCalendar package that allows a user to add events. User can add tasks to a to-do-list, as well as add recipe ingredients to a grocery list. With the use RecipeAP2 it allows the user to search through an API and pick out recipes. Once the recipe is selected the ingredients automatically get added to the grocery list. 
 
 
 
