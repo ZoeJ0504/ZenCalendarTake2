@@ -1,7 +1,7 @@
 # Zen Calendar
 
 <p align="center">
-  <img src=".src/images/ZenCalendar.png">  
+  <img src="src/images/ZenCalendar.png">  
 </p>
 
 
